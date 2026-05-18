@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} {{ trans(key="home", lang=lang) }} | {{ super() }} {% endblock title %}
+
+{% block content %}
+<section class="mt-4">
+    <div class="hero bg-base-200 p-4 rounded-2xl">
+        <div class="hero-content text-center">
+            <div>
+                <h1 class="h1 text-4xl">{{ trans(key="hi-there", lang=lang) }}</h1>
+
+                <p class="text-xl">{{ trans(key="summary", lang=lang) }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

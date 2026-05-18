@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit: contain"
+        />
+        <title>{% block title %}Bofe{% endblock title %}</title>
+        <link rel="stylesheet" href="{{ get_url(path='style.css') }}" />
+        <link rel="icon" href="{{ get_url(path='favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <a href="/">
+                        <div class="brand">
+                            <img alt="Bofe" class="brand-icon" src="{{ get_url(path='icon.svg') }}" />
+
+                            <span class="brand-logo">Bofe</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="layout">
+                <main class="main">{% block content %} {% endblock content %}</main>
+
+                <footer class="footer">
+                    <aside class="opacity-75">
+                        <p>{{ trans(key="version", lang=lang) }}: {{ config.extra.version }} </p>
+
+                        <p>© 2026 Bofe Group</p>
+                    </aside>
+
+                    <nav>
+                        <a class="flex gap-2" href="https://github.com/javierEd/bofe_website" target="_blank">
+                            <img alt="Logo" class="w-5 h-5" src="{{ get_url(path='github.svg') }}" />
+                            GitHub
+                        </a>
+                    </nav>
+
+                    <nav>
+                        <a href="/terms">{{ trans(key="terms-of-service", lang=lang) }}</a>
+                        <a href="/privacy">{{ trans(key="privacy-policy", lang=lang) }}</a>
+                    </nav>
+
+                    <nav>
+                        <div class="dropdown dropdown-top">
+                            <button class="btn btn-outline btn-accent w-36 justify-between normal-case"  tabindex="0">
+                                {{ trans(key="lang-name", lang=lang) }}
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                  <path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <ul class="dropdown-content menu w-36 p-2 mb-2" tabindex="0">
+                                {% if lang == "en" %}
+                                    <li><a href="/es">{{ trans(key="lang-name", lang="es") }}</a></li>
+                                {% else %}
+                                    <li><a href="{{ current_path | regex_replace(pattern="^es/", rep="/") }}">{{ trans(key="lang-name", lang="en") }}</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
