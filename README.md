@@ -30,7 +30,7 @@
     /></a>
 </p>
 
-Bofe is the perfect solution to create and manage Kanban boards.
+With **Bofe** you can easily build kanban style boards for your projects, personal workflows, or just for fun.
 
 > [!NOTE]
 > This repository contains the website for the project.

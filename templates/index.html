@@ -1,18 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %} {{ trans(key="home", lang=lang) }} | {{ super() }} {% endblock title %}
+{% block title %} {{ super() }} - {{ trans(key="tagline", lang=lang) }} {% endblock title %}
 
 {% block content %}
 <section class="mt-4">
     <div class="hero bg-base-200 p-4 rounded-2xl">
         <div class="hero-content text-center">
             <div>
-                <h1 class="h1 text-4xl">{{ trans(key="hi-there", lang=lang) }}</h1>
+                <h1 class="h1 text-3xl">{{ trans(key="tagline", lang=lang) }}</h1>
 
-                <p class="text-xl">{{ trans(key="summary", lang=lang) }}</p>
+                <p class="text-xl">{{ trans(key="description", lang=lang) }}</p>
+
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="https://play.google.com/store/apps/details?id=app.bofe" target="_blank">
+                        <img
+                            class="h-12"
+                            alt="{{trans(key="get-it-on-google-play", lang=lang) }}"
+                            src="{{ get_url(path='google-play.svg') }}"
+                        />
+                    </a>
+
+                    <a class="btn btn-outline btn-primary btn-lg" href="https://bofe.app" target="_blank">
+                        {{ trans(key="go-to-web-app", lang=lang) }}
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
 {% endblock content %}
