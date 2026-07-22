@@ -11,34 +11,30 @@ theme = "catppuccin-mocha"
 [translations]
 lang-name = "English"
 
-become-a-tester = "Become a Tester"
-closed-test = "Closed test"
+description = "With Bofe you can easily build kanban style boards for your projects, personal workflows, or just for fun."
+get-it-on-google-play = "Get it on Google Play"
 go-to-web-app = "Go to web app"
-hi-there = "Hi there!"
 home = "Home"
 or = "or"
 privacy-policy = "Privacy Policy"
+roadmap = "Roadmap"
+tagline = "Kanban style boards"
 terms-of-service = "Terms of Service"
-try-android-app = "Try Android app"
 version = "Version"
-
-summary = "We are a small group of people building some cool stuff"
 
 [languages.es.translations]
 lang-name = "Español"
 
-become-a-tester = "Conviértete en Tester"
-closed-test = "Prueba cerrada"
+description = "Con Bofe puedes crear facilmente tableros al estilo kanban para tus proyectos, flujos personales, o simplemente por diversión."
+get-it-on-google-play = "Obtenla en Google Play"
 go-to-web-app = "Ir a la web app"
-hi-there = "Hola!"
 home = "Inicio"
 or = "o"
 privacy-policy = "Política de Privacidad"
+roadmap = "Roadmap"
+tagline = "Tableros al estilo kanban"
 terms-of-service = "Términos de Servicio"
-try-android-app = "Probar Android app"
 version = "Versión"
-
-summary = "Somos un pequeño grupo de personas construyendo algo genial"
 
 [extra]
 version = "0.0.0-alpha.0"
