@@ -3,7 +3,7 @@
 {% block title %} {{ super() }} - {{ trans(key="tagline", lang=lang) }} {% endblock title %}
 
 {% block content %}
-<section class="mt-4">
+<section>
     <div class="hero bg-base-200 p-4 rounded-2xl">
         <div class="hero-content text-center">
             <div>
@@ -12,6 +12,9 @@
                 <p class="text-xl">{{ trans(key="description", lang=lang) }}</p>
 
                 <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a class="btn btn-outline btn-primary btn-lg" href="https://bofe.app" target="_blank">
+                        {{ trans(key="go-to-web-app", lang=lang) }}
+                    </a>
                     <a href="https://play.google.com/store/apps/details?id=app.bofe" target="_blank">
                         <img
                             class="h-12"
@@ -19,13 +22,25 @@
                             src="{{ get_url(path='google-play.svg') }}"
                         />
                     </a>
-
-                    <a class="btn btn-outline btn-primary btn-lg" href="https://bofe.app" target="_blank">
-                        {{ trans(key="go-to-web-app", lang=lang) }}
-                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<section class="mt-8 text-center">
+    <div class="mockup-browser border border-base-300">
+        <div class="mockup-browser-toolbar">
+            <div class="input">https://bofe.app/#/javier/roadmap</div>
+        </div>
+        <div class="relative">
+        <img
+            class="absolute right-0 w-[120px] h-[48px] object-none object-right-top"
+            src="{{ get_url(path='screenshot-v0.0.0-alpha.27.jpg') }}"
+        />
+        <img class="h-[860px] object-cover object-left-top" src="{{ get_url(path='screenshot-v0.0.0-alpha.27.jpg') }}" />
+        </div>
+    </div>
+</section>
+
 {% endblock content %}
